@@ -22,6 +22,8 @@
 
 puts 'Cleaning database...'
 Ingredient.destroy_all
+Cocktail.destroy_all
+Dose.destroy_all
 
 puts 'Creating ingredients...'
 Ingredient.create(name: "lemon")
@@ -32,8 +34,8 @@ Cocktail.create(name: "Le tropico")
 Cocktail.create(name: "Picolo")
 Cocktail.create(name: "Long island")
 
-Dose.create(description: 5, ingredient_id: 1, cocktail_id: 1)
-Dose.create(description: 2, ingredient_id: 2, cocktail_id: 1)
-Dose.create(description: 1, ingredient_id: 3, cocktail_id: 1)
+Dose.create(description: "5cl", ingredient_id: 1, cocktail_id: 1)
+Dose.create(description: "2cl", ingredient_id: 2, cocktail_id: 1)
+Dose.create(description: "1cl", ingredient_id: 3, cocktail_id: 1)
 
-puts "Finished, we have #{Ingredient.count} ingredients & #{Cocktail.count} cocktails in our list!"
+puts "Finished, we have #{Dose.count} ingredients & #{Cocktail.count} cocktails in our list!"
